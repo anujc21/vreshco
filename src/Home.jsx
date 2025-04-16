@@ -1,7 +1,11 @@
-import React from "react";
-import {Box, Button, Typography, Input} from "@mui/material";
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {Box, Button, Typography, Input, Divider} from "@mui/material";
+import {Call, Mail, LocationOn, Facebook, Instagram, Twitter} from "@mui/icons-material";
 
 function Home(){
+	const navigate = useNavigate();
+
 	const products = [
 		{
 			image: "shoe2.png",
@@ -49,8 +53,12 @@ function Home(){
 		}
 	];
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
-		<Box sx={{
+		<Box className="page" sx={{
 			width: "100%",
 			height: "auto",
 			display: "flex",
@@ -175,6 +183,7 @@ function Home(){
 							background: "#000",
 							color: "#fff"
 						}}
+						onClick={() => navigate("/shop")}
 					>
 						Shop now
 					</Button>
@@ -343,6 +352,9 @@ function Home(){
 								minWidth: "350px",
 								height: "70%",
 								background: `url(${category.image})`,
+								backgroundSize: "cover",
+								backgroundPosition: "center center",
+								backgroundRepeat: "no-repeat",
 								borderRadius: "20px",
 								display: "flex",
 								alignItems: "center",
@@ -488,7 +500,7 @@ function Home(){
 					fontSize: "20px",
 					color: "#ccc"
 				}}>
-					Subscribe to our newsletter exclusive offers and updates.
+					Subscribe to our newsletter for exclusive offers and updates.
 				</Typography>
 
 				<Box sx={{
@@ -539,6 +551,262 @@ function Home(){
 						Subscribe
 					</Button>
 				</Box>
+			</Box>
+
+			<Box sx={{
+				padding: "40px 60px",
+				width: "100%",
+				height: "auto",
+				background: "#1F2937",
+				display: "flex",
+				justifyContent: "center",
+				flexDirection: "column"
+			}}>
+				<Box sx={{
+					display: "flex",
+					justifyContent: "center",
+					flexWrap: "wrap",
+					gap: "50px"
+				}}>
+					<Box sx={{
+						width: "300px"
+					}}>
+						<Typography sx={{
+							fontSize: "22px",
+							fontWeight: "bold",
+							color: "#fff"
+						}}>
+							ShoeStyle
+						</Typography>
+
+						<Typography sx={{
+							margin: "15px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc"
+						}}>
+							Your premier destination for quality footwear.
+						</Typography>
+
+						<Box sx={{
+							margin: "20px 0px 0px 0px",
+							display: "flex",
+							alignItems: "center",
+							justifyContent: "start"
+						}}>
+							<Facebook sx={{
+								color: "#ccc",
+								fontSize: "1.2rem",
+								"&:hover": {
+									cursor: "pointer",
+									filter: "brightness(1.5)"
+								}
+							}}/>
+
+							<Instagram sx={{
+								margin: "0px 30px 0px 30px",
+								color: "#ccc",
+								fontSize: "1.2rem",
+								"&:hover": {
+									cursor: "pointer",
+									filter: "brightness(1.5)"
+								}
+							}}/>
+
+							<Twitter sx={{
+								color: "#ccc",
+								fontSize: "1.2rem",
+								"&:hover": {
+									cursor: "pointer",
+									filter: "brightness(1.5)"
+								}
+							}}/>
+						</Box>
+					</Box>
+
+					<Box sx={{
+						width: "300px"
+					}}>
+						<Typography sx={{
+							fontSize: "22px",
+							fontWeight: "bold",
+							color: "#fff"
+						}}>
+							Quick Links
+						</Typography>
+
+						<Typography sx={{
+							margin: "15px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							About Us
+						</Typography>
+
+						<Typography sx={{
+							margin: "5px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							Contact
+						</Typography>
+
+						<Typography sx={{
+							margin: "5px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							Blog
+						</Typography>
+
+						<Typography sx={{
+							margin: "5px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							FAQs
+						</Typography>
+					</Box>
+
+					<Box sx={{
+						width: "300px"
+					}}>
+						<Typography sx={{
+							fontSize: "22px",
+							fontWeight: "bold",
+							color: "#fff"
+						}}>
+							Policies
+						</Typography>
+
+						<Typography sx={{
+							margin: "15px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							Privacy Policies
+						</Typography>
+
+						<Typography sx={{
+							margin: "5px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							Terms of Service
+						</Typography>
+
+						<Typography sx={{
+							margin: "5px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							Shipping Policy
+						</Typography>
+
+						<Typography sx={{
+							margin: "5px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc",
+							"&:hover": {
+								cursor: "pointer",
+								filter: "brightness(1.5)"
+							}
+						}}>
+							Returns
+						</Typography>
+					</Box>
+
+					<Box sx={{
+						width: "300px"
+					}}>
+						<Typography sx={{
+							fontSize: "22px",
+							fontWeight: "bold",
+							color: "#fff"
+						}}>
+							Contact Us
+						</Typography>
+
+						<Typography sx={{
+							margin: "15px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc"
+						}}>
+							<Call sx={{
+								margin: "0px 2px -4px 0px",
+								fontSize: "1.2rem"
+							}}/>
+
+							1-800-SHOES
+						</Typography>
+
+						<Typography sx={{
+							margin: "15px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc"
+						}}>
+							<Mail sx={{
+								margin: "0px 5px -5px 0px",
+								fontSize: "1.2rem"
+							}}/>
+
+							support@shoestyle.com
+						</Typography>
+
+						<Typography sx={{
+							margin: "15px 0px 0px 0px",
+							fontSize: "16px",
+							color: "#ccc"
+						}}>
+							<LocationOn sx={{
+								margin: "0px 2px -4px 0px",
+								fontSize: "1.2rem"
+							}}/>
+
+							123 Shoe Street, Fashion District
+						</Typography>
+					</Box>
+				</Box>
+
+				<Divider sx={{
+					height: "2px",
+					margin: "30px 0px 30px 0px",
+					background: "#374151"
+				}}/>
+
+				<Typography align="center" sx={{
+					fontSize: "16px",
+					color: "#ccc"
+				}}>
+					© 2025 ShoeStyle. All rights reserved.
+				</Typography>
 			</Box>
 		</Box>
 	);

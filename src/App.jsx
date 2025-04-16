@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {createTheme, ThemeProvider, CssBaseline, Box} from "@mui/material";
 import Header from "./Header.jsx";
 import Home from "./Home.jsx";
+import Shop from "./Shop.jsx";
 import "./App.css";
 
 const theme = createTheme({
@@ -33,6 +34,8 @@ function App(){
 
                 <Routes>
                     <Route path="/" element={<Home/>}/>
+
+                    <Route path="/shop" element={<Shop/>}/>
                 </Routes>
             </Box>
         </ThemeProvider>

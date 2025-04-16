@@ -1,8 +1,11 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import {AppBar, Toolbar, Box, Input, InputAdornment, Button} from "@mui/material";
 import {Search, Home, ShoppingCart} from "@mui/icons-material";
 
 function Header(){
+	const navigate = useNavigate();
+
 	return (
 		<AppBar position="fixed" sx={{
 			background: "#000"
@@ -87,7 +90,7 @@ function Header(){
 						"&:hover": {
 							cursor: "pointer"
 						}
-					}}>
+					}} onClick={() => navigate("/")}>
 						<Home sx={{
 							color: "#fff"
 						}}/>
