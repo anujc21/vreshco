@@ -1,8 +1,12 @@
 import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 import {Box, Typography, Button} from "@mui/material";
+import {ArrowBackIosNew} from "@mui/icons-material";
 import Footer from "./Footer.jsx";
 
 function Shop(){
+	const navigate = useNavigate();
+
 	const colors = ["#000", "#fff", "#EF4444", "#3B82F6"];
 
 	const sizes = ["US 8", "US 9", "US 10", "US 11"];
@@ -24,6 +28,7 @@ function Shop(){
 			background: "#000"
 		}}>
 			<Box sx={{
+				position: "relative",
 				margin: "100px 0px 0px 0px",
 				width: "100%",
 				display: "flex",
@@ -31,7 +36,47 @@ function Shop(){
 				justifyContent: "center",
 				flexWrap: "wrap"
 			}}>
+				<Box
+					sx={{
+						position: "absolute",
+						top: "20px",
+						left: "20px",
+						width: "45px",
+						height: "45px",
+						borderRadius: "50%",
+						margin: "0px 10px 0px 0px",
+						background: "linear-gradient(to right, #cf3dff, #1c78d4)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center"
+					}}
+				>
+					<Box sx={{
+						width: "90%",
+						height: "90%",
+						borderRadius: "50%",
+						background: "rgba(0, 0, 0, 0.7)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						"&:hover": {
+							cursor: "pointer"
+						},
+						"&:active": {
+							background: "rgba(0, 0, 0, 0.2)"
+						},
+						transition: "0.2s background"
+					}}>
+						<ArrowBackIosNew sx={{
+							color: "#fff"
+						}}/>
+					</Box>
+				</Box>
+
 				<Box sx={{
+					marginTop: {
+						xs: "80px"
+					},				
 					display: "flex",
 					justifyContent: "center",
 					flexDirection: "column"
@@ -241,7 +286,7 @@ function Shop(){
 						border: "4px solid #480d57",
 						borderRadius: "10px",
 						boxShadow: "0px 8px 32px rgba(255, 255, 255, 0.5)"
-					}}>
+					}} onClick={() => navigate("/payments")}>
 						Buy Now
 					</Button>
 
@@ -254,7 +299,7 @@ function Shop(){
 						border: "4px solid #480d57",
 						borderRadius: "10px",
 						boxShadow: "0px 8px 32px rgba(255, 255, 255, 0.5)"
-					}}>
+					}} onClick={() => navigate("/cart")}>
 						Add to Cart
 					</Button>
 				</Box>

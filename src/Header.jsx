@@ -1,7 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {AppBar, Toolbar, Box, Input, InputAdornment, Button} from "@mui/material";
-import {Search, Home, ShoppingCart} from "@mui/icons-material";
+import {Search, Home, ShoppingCart, Person, Login} from "@mui/icons-material";
 
 function Header(){
 	const navigate = useNavigate();
@@ -55,7 +55,7 @@ function Header(){
 						    }
 						}}
 						endAdornment={
-							<InputAdornment position="start">
+							<InputAdornment position="end">
 								<Search sx={{
 									color: "#fff",
 									"&:hover": {
@@ -71,6 +71,7 @@ function Header(){
 					sx={{
 						width: "45px",
 						height: "45px",
+						padding: "2px",
 						borderRadius: "50%",
 						margin: "0px 10px 0px auto",
 						background: "linear-gradient(to right, #cf3dff, #1c78d4)",
@@ -80,8 +81,8 @@ function Header(){
 					}}
 				>
 					<Box sx={{
-						width: "90%",
-						height: "90%",
+						width: "100%",
+						height: "100%",
 						borderRadius: "50%",
 						background: "rgba(0, 0, 0, 0.7)",
 						display: "flex",
@@ -89,7 +90,11 @@ function Header(){
 						justifyContent: "center",
 						"&:hover": {
 							cursor: "pointer"
-						}
+						},
+						"&:active": {
+							background: "rgba(0, 0, 0, 0.2)"
+						},
+						transition: "0.2s background"
 					}} onClick={() => navigate("/")}>
 						<Home sx={{
 							color: "#fff"
@@ -101,6 +106,7 @@ function Header(){
 					sx={{
 						width: "45px",
 						height: "45px",
+						padding: "2px",
 						borderRadius: "50%",
 						margin: "0px 10px 0px 0px",
 						background: "linear-gradient(to right, #cf3dff, #1c78d4)",
@@ -110,8 +116,8 @@ function Header(){
 					}}
 				>
 					<Box sx={{
-						width: "90%",
-						height: "90%",
+						width: "100%",
+						height: "100%",
 						borderRadius: "50%",
 						background: "rgba(0, 0, 0, 0.7)",
 						display: "flex",
@@ -119,9 +125,88 @@ function Header(){
 						justifyContent: "center",
 						"&:hover": {
 							cursor: "pointer"
-						}
-					}}>
+						},
+						"&:active": {
+							background: "rgba(0, 0, 0, 0.2)"
+						},
+						transition: "0.2s background"
+					}} onClick={() => navigate("/cart")}>
 						<ShoppingCart sx={{
+							color: "#fff"
+						}}/>
+					</Box>
+				</Box>
+
+				<Box
+					sx={{
+						width: "45px",
+						height: "45px",
+						padding: "2px",
+						borderRadius: "50%",
+						margin: "0px 10px 0px 0px",
+						background: "linear-gradient(to right, #cf3dff, #1c78d4)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center"
+					}}
+				>
+					<Box sx={{
+						width: "100%",
+						height: "100%",
+						borderRadius: "50%",
+						background: "rgba(0, 0, 0, 0.7)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						"&:hover": {
+							cursor: "pointer"
+						},
+						"&:active": {
+							background: "rgba(0, 0, 0, 0.2)"
+						},
+						transition: "0.2s background"
+					}} onClick={() => navigate("/profile")}>
+						<Person sx={{
+							color: "#fff"
+						}}/>
+					</Box>
+				</Box>
+
+				<Box
+					sx={{
+						width: "45px",
+						height: "45px",
+						padding: "2px",
+						borderRadius: "50%",
+						margin: "0px 10px 0px 0px",
+						background: "linear-gradient(to right, #cf3dff, #1c78d4)",
+						display: {
+							xs: "flex",
+							sm: "flex",
+							md: "none",
+							lg: "none"
+						},
+						alignItems: "center",
+						justifyContent: "center"
+					}}
+				>
+					<Box sx={{
+						width: "100%",
+						height: "100%",
+						borderRadius: "50%",
+						background: "rgba(0, 0, 0, 0.7)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						"&:hover": {
+							cursor: "pointer"
+						},
+						"&:active": {
+							background: "rgba(0, 0, 0, 0.2)"
+						},
+						transition: "0.2s background"
+					}} onClick={() => navigate("/sign-in")}>
+						<Login sx={{
 							color: "#fff"
 						}}/>
 					</Box>
@@ -131,21 +216,27 @@ function Header(){
 					sx={{
 						width: "100px",
 						height: "40px",
+						padding: "2px",
 						borderRadius: "10px",
 						margin: "0px 5px 0px 10px",
 						background: "linear-gradient(to right, #cf3dff, #1c78d4)",
-						display: "flex",
+						display: {
+							xs: "none",
+							sm: "none",
+							md: "flex",
+							lg: "flex"
+						},
 						alignItems: "center",
 						justifyContent: "center"
 					}}
 				>
 					<Button sx={{
-						width: "96px",
-						height: "36px",
+						width: "100%",
+						height: "100%",
 						borderRadius: "10px",
 						color: "#fff",
 						background: "rgba(0, 0, 0, 0.7)"
-					}}>
+					}} onClick={() => navigate("/sign-in")}>
 						Log in
 					</Button>
 				</Box>

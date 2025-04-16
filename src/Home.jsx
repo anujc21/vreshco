@@ -274,7 +274,7 @@ function Home(){
 									transform: "scale(1.05)"
 								},
 								transition: "0.2s transform"
-							}}>
+							}} onClick={() => navigate("/shop")}>
 								<Box sx={{
 									borderRadius: "10px 10px 0px 0px",
 									width: "100%",
@@ -365,7 +365,7 @@ function Home(){
 									transform: "scale(1.05)"
 								},
 								transition: "0.2s transform"
-							}}>
+							}} onClick={() => navigate("/shop")}>
 								<Box sx={{
 									borderRadius: "20px",
 									width: "100%",
@@ -438,7 +438,7 @@ function Home(){
 									transform: "scale(1.05)"
 								},
 								transition: "0.2s transform"
-							}}>
+							}} onClick={() => navigate("/shop")}>
 								<Box sx={{
 									borderRadius: "10px 10px 0px 0px",
 									width: "100%",

@@ -39,7 +39,7 @@ function Footer(){
 							filter: "brightness(1.5)"
 						}
 					}}>
-						Out Story
+						Our Story
 					</Typography>
 
 					<Typography sx={{
