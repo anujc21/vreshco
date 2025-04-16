@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Box, Button } from "@mui/material";
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {Box, Button} from "@mui/material";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import PaymentsIcon from "@mui/icons-material/Payments";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -13,10 +13,18 @@ function Payments() {
     const navigate = useNavigate();
 
     const paymentMethods = [
-        { label: "Credit/Debit Card", icon: <CreditCardIcon fontSize="small" /> },
-        { label: "UPI", icon: <PaymentsIcon fontSize="small" /> },
-        { label: "Cash on Delivery", icon: <LocalShippingIcon fontSize="small" /> },
-        { label: "Wallet", icon: <AccountBalanceWalletIcon fontSize="small" /> },
+        {
+            label: "Credit/Debit Card", icon: <CreditCardIcon fontSize="small" />
+        },
+        {
+            label: "UPI", icon: <PaymentsIcon fontSize="small" />
+        },
+        {
+            label: "Cash on Delivery", icon: <LocalShippingIcon fontSize="small" />
+        },
+        {
+            label: "Wallet", icon: <AccountBalanceWalletIcon fontSize="small" />
+        },
     ];
 
     useEffect(() => {
